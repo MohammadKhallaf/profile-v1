@@ -1,0 +1,42 @@
+// My Design Themes
+@import "colors";
+// ##############################
+$carousel-control-color: $gold-web-golden;
+$carousel-indicator-opacity: 1;
+// ##############################
+
+// $secondary: $oxford-blue;
+// $primary: $powder-blue;
+$dark: $rich-black-fogra-29;
+$warning: $mikado-yellow;
+// $info:;
+@import "../components/bootstrap/scss/bootstrap.scss";
+.carousel-item {
+  h2 {
+    color: $mikado-yellow;
+  }
+}
+.bg-dark {
+  // *{
+  //     color:$gold-web-golden;}
+}
+
+// all titles in sections are in same style
+.about-section,
+.projects-section,
+.services-section {
+  h1 {
+    @extend .text-center;
+    @extend .text-uppercase;
+    @extend .fw-bold;
+  }
+}
+
+.serv-item {
+  height: 100px;
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  color: $prussian-blue;
+  background: $mikado-yellow;
+}
