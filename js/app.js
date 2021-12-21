@@ -1,7 +1,9 @@
 const projects =[]
 const buildpage = ()=>{
 
-  fetch("../res/json/portfolio.json")
+  fetch("../res/json/portfolio.json",{
+    mode: 'cors'
+  })
   .then((result)=>{
     return result.json()
   })
