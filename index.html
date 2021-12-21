@@ -6,24 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammed Khallaf</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- fontawsome -->
     <link rel="stylesheet" href="./components/fontawsome/css/all.min.css" />
-
+    <!-- bootstrap -->
     <script
       src="./components/bootstrap/js/bootstrap.bundle.min.js"
       defer
     ></script>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- app js -->
+    <script src="./js/app.js" defer></script>
   </head>
-  <body>
+  <body class="mt-5">
     <!-- navbar -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav
+        class="
+          navbar navbar-expand-md navbar-dark
+          shadow-lg
+          bg-secondary
+          fixed-top
+        "
+      >
+        <div class="container-fluid px-5">
           <a href="#" class="navbar-brand"
-            ><i class="fas fa-bolt"></i> Mohammed Khallaf</a
+            ><i class="fas fa-bolt"></i> <span>Mohammed Khallaf</span></a
           >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="nabar navbar-expand">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -56,271 +84,180 @@
 
     <!-- <===body===> -->
     <!-- summary -->
-    <div class="container-fluid mt-5 pt-5 bg-light">
-      <div class="row">
-        <div class="col">
-          <img src="./res/imgs/web-blue-1.svg" alt="" />
-        </div>
-        <div class="col">
-          <p>- Web Developer</p>
-          <h1 class="display-1 fw-bold">Mohammed Khallaf</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
-            id nisi necessitatibus soluta ad aspernatur commodi similique sit?
-            Architecto, minima?
-          </p>
-          <a class="btn btn-light">about me</a>
+    <div
+      class="
+        summary-section
+        container-fluid
+        d-flex
+        flex-column
+        justify-content-center
+        py-5
+        bg-light
+        vh-100
+      "
+    >
+      <div class="container px-4">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 pe-5">
+            <img src="./res/imgs/web-blue-1.svg" class="mw-100" alt="" />
+          </div>
+          <div class="col">
+            <p class="fw-bolder fs-3">&mdash; Web Developer</p>
+            <h1 class="display-1 fw-bold text-primary">Mohammed Khallaf</h1>
+            <p>
+              Front-End Developer with continous learning and exploring new
+              technologies and tools. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Deserunt laboriosam unde, ipsa rem cum
+              architecto nisi doloremque soluta dolores iusto?
+            </p>
+            <a
+              class="
+                btn btn-outline-secondary btn-lg
+                fw-bold
+                rounded-pill
+                shadow
+                mt-3
+              "
+              >See my work</a
+            >
+          </div>
         </div>
       </div>
     </div>
     <!-- /summary -->
     <!-- About -->
-    <div class="container-fluid mx-0 py-5 bg-primary bg-gradient">
-      <div class="container about-section">
-        <div class="col">
-          <h1>About me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            molestiae quae, odio distinctio voluptate eos quidem voluptatibus
-            tenetur! Ipsum, eligendi ipsa quos illum aperiam architecto enim
-            dolore iure dolorem. Natus!
-          </p>
-          <!-- carousel -->
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
-            data-bs-interval="false"
-          >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <!-- carousel inner -->
-            <div class="carousel-inner">
-              <!-- education -->
-              <div class="carousel-item">
-                <div class="education row">
-                  <div class="col">
-                    <h2>Education</h2>
-                    <h5>Alexandria University</h5>
-                    <p>Faculty of Engineering - Electrical Department (2020)</p>
-                  </div>
-                  <div class="col">
-                    <img src="./res/imgs/dev-on-desk-yellow.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <!-- /education -->
-              <!-- expreience -->
-              <div class="carousel-item">
-                <div class="experience row">
-                  <div class="col">
-                    <h2>Experience</h2>
-                    <p>
-                      some text Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Nulla molestias distinctio facilis dicta
-                      atque dolore ipsum modi reprehenderit tempore culpa!
-                    </p>
-                  </div>
-                  <div class="col">
-                    <img src="./res/imgs/man-rocket-yellow.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <!-- /expreience -->
-              <!-- training -->
-
-              <div class="carousel-item active">
-                <div class="trainig row">
-                  <div class="col">
-                    <h2>Training</h2>
-                    <p>
-                      some text Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Nulla molestias distinctio facilis dicta
-                      atque dolore ipsum modi reprehenderit tempore culpa!
-                    </p>
-                  </div>
-                  <div class="col">
-                    <img src="./res/imgs/man-two-colors.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <!-- /training -->
-            </div>
-            <!-- /carousel inner -->
-
+    <div class="container-fluid mx-0 py-5 bg-primary">
+      <div class="about-section">
+        <h1 class="text-warning">About me</h1>
+        <p class="text-center text-white text-opacity-75 mb-5">
+          Where journey started and continue...
+        </p>
+        <!-- carousel -->
+        <div
+          id="carouselIndicators"
+          class="carousel slide container px-5"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
             <button
-              class="carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
             <button
-              class="carousel-control-next"
               type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
-          <!-- /carousel -->
+          <!-- carousel inner -->
+          <div class="carousel-inner">
+            <!-- education -->
+            <div class="carousel-item active">
+              <div class="education row">
+                <div class="col">
+                  <h2>Education</h2>
+                  <h5>Alexandria University</h5>
+                  <p>Faculty of Engineering - Electrical Department (2020)</p>
+                </div>
+                <div class="col">
+                  <img src="./res/imgs/dev-on-desk-yellow.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- /education -->
+            <!-- expreience -->
+            <div class="carousel-item">
+              <div class="experience row">
+                <div class="col">
+                  <h2>Experience</h2>
+                  <p>
+                    some text Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nulla molestias distinctio facilis dicta atque dolore
+                    ipsum modi reprehenderit tempore culpa!
+                  </p>
+                </div>
+                <div class="col">
+                  <img src="./res/imgs/man-rocket-yellow.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- /expreience -->
+            <!-- training -->
+
+            <div class="carousel-item">
+              <div class="trainig row">
+                <div class="col">
+                  <h2>Training</h2>
+                  <p>
+                    some text Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nulla molestias distinctio facilis dicta atque dolore
+                    ipsum modi reprehenderit tempore culpa!
+                  </p>
+                </div>
+                <div class="col">
+                  <img src="./res/imgs/man-two-colors.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- /training -->
+          </div>
+          <!-- /carousel inner -->
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="col">
-          <img src="" alt="" />
-        </div>
+        <!-- /carousel -->
       </div>
     </div>
     <!-- /About -->
-    <!-- Portfolio -->
+    <!--== Portfolio ==-->
     <div class="container-fluid mx-0 py-5">
       <div class="container projects-section">
         <h1>Portfolio</h1>
+        <p class="text-center pb-4 text-muted">Where it become real ...</p>
         <div class="container">
-          <div class="row">
-            <!-- project 1 -->
-
-            <div class="col">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://via.placeholder.com/500"
-                  alt=""
-                />
-
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-            <!-- /project 1 -->
-            <!-- project 2 -->
-            <div class="col">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://via.placeholder.com/500"
-                  alt=""
-                />
-
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-            <!-- /project 2 -->
-            <!-- project 3 -->
-            <div class="col">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://via.placeholder.com/500"
-                  alt=""
-                />
-
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      View
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5"
+            id="portfolio-row"
+          ></div>
         </div>
       </div>
     </div>
     <!-- /Portfolio -->
 
     <!-- Services -->
-    <div class="container-fluid mx-0 py-5 bg-dark">
+    <div class="container-fluid mx-0 py-5 bg-secondary">
       <div class="container services-section">
-        <h1 class="text-warning">What I Do?</h1>
-        <p>here i will use cards</p>
-        <div class="row">
+        <h1 class="text-warning">Features I introduce</h1>
+
+        <div class="row mt-5">
           <div class="col d-flex flex-column align-items-center">
             <div
               class="
@@ -369,47 +306,119 @@
       </div>
     </div>
     <!-- /Services -->
-    <!--  -->
+    <!-- skills -->
+    <div class="container-fluid bg-light mx-0 py-5">
+      <div class="container skills-section">
+        <h1 class="text-warning">Skills</h1>
+      </div>
+    </div>
+    <!-- /skills -->
     <!-- CONTACT -->
     <div class="container-fluid mx-0 py-5 bg-dark">
-      <div class="container contact-section">
-        <h1>Contact me</h1>
+      <div class="container px-5 contact-section">
+        <h1 class="text-success mb-5">Contact me</h1>
         <div class="row">
           <!-- contatct-message -->
           <div class="col">
-            <div class="display-1 fw-bold text-uppercase">Contact me</div>
-            <p>Build your perfect!</p>
-            <nav class="nav bg-light text-black">
-              <div class="container-fluid">
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-github-square"></i>
+            <div class="display-5 fw-bold text-uppercase mb-5">
+              Let the journey start
+            </div>
+            <div class="flex-column text-light fs-4 g-3">
+              <div class="pb-3">
+                <i class="fas fa-home text-success"></i>
+                <span class="ps-2">Alexandria, Egypt</span>
               </div>
-            </nav>
+              <div class="pb-3">
+                <a href="mailto:ee.mkh.20@gmail.com">
+                  <i class="fas fa-envelope text-success"></i>
+                  <span class="text-white ps-2"> ee.mkh.20@gmail.com </span>
+                </a>
+              </div>
+              <div class="pb-3">
+                <p>
+                  <i class="fas fa-phone-alt text-success"></i>
+                  <span class="text-white ps-2">+20-102-914-9153</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="text-warning">
+              <div class="row fs-1">
+                <div class="col">
+                  <a
+                    href="https://www.linkedin.com/in/mohammedkhallaf/"
+                    target="_blank"
+                    class="text-warning"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://github.com/MohammadKhallaf"
+                    target="_blank"
+                    class="text-warning"
+                  >
+                    <i class="fab fa-github-square"></i>
+                  </a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://codepen.io/MohammadKhallaf"
+                    target="_blank"
+                    class="text-warning"
+                  >
+                    <i class="fab fa-codepen"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /contatct-message -->
           <!-- contatct-form -->
           <div class="col">
             <form action="" class="mb-3">
-              <input
-                type="text"
-                class="form-control mb-3"
-                placeholder="Your Name"
-              />
-
-              <input
-                type="email"
-                class="form-control mb-3"
-                name=""
-                id=""
-                placeholder="Email Address"
-              />
-              <input
-                type="text"
-                class="form-control mb-3"
-                placeholder="Subject"
-              />
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <button type="submit" class="btn btn-light">Send Message</button>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control mb-3"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control mb-3"
+                    name=""
+                    id=""
+                    placeholder="Email Address"
+                  />
+                </div>
+                <div class="col-md-12">
+                  <input
+                    type="text"
+                    class="form-control mb-3"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Message"
+                      id="messageTextArea"
+                      style="height: 200px"
+                    ></textarea>
+                    <label for="messageTextArea">Your message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-success rounded-pill w-100" id="sendmessage">
+                    Send Message
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
           <!-- /contatct-form -->
@@ -429,7 +438,7 @@
         <i class="fab fa-linkedin"></i>
         <i class="fab fa-github-square"></i>
       </div> -->
-      <div class="container-fluid mx-0 px-5">
+      <div class="container mx-0 px-5">
         <p class="text-muted">Copyrights &copy; Mohammed Khallaf</p>
       </div>
     </footer>

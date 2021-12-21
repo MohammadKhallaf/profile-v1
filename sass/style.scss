@@ -1,35 +1,80 @@
 // My Design Themes
 @import "colors";
 // ##############################
-$carousel-control-color: $gold-web-golden;
 // $carousel-indicator-opacity: 1;
 // ##############################
 
 // $secondary: $oxford-blue;
-// $primary: $powder-blue;
+
 $dark: $rich-black-fogra-29;
 $warning: $mikado-yellow;
+
+$primary: $prussian-blue;
+$secondary: $oxford-blue;
+$success: $powder-blue;
+$info: $navy-blue;
+$warning: $mikado-yellow;
+// $danger: $red;
+// $light: $powder-blue;
+$dark: $rich-black-fogra-29;
+
 // $info:;
+
+// #########
+$carousel-control-opacity: 0.1;
+$carousel-indicator-active-bg: $gold-web-golden;
+
+$card-height: 100%;
+
 @import "../components/bootstrap/scss/bootstrap.scss";
-.carousel-item {
-  h2 {
-    color: $mikado-yellow;
+@import "carousel-edit";
+
+// a{
+//   text-decoration: none;
+// }
+.card {
+  max-width: 25rem;
+  overflow: hidden;
+  img {
+    transition: all ease 0.8s;
+  }
+  img:hover {
+    transform: scale(1.25);
+  }
+  .card-title {
+    @extend .card-title;
+    @extend .fw-bold;
+    @extend .fs-3;
+  }
+  .card-body {
+    position: relative;
+
+    &.bg-primary {
+      .card-text {
+        color: $cerulean-crayola;
+      }
+    }
   }
 }
-.bg-dark {
-  // *{
-  //     color:$gold-web-golden;}
+
+.carousel-item {
+  h2 {
+    color: $powder-blue;
+  }
 }
 
 // all titles in sections are in same style
 .about-section,
 .projects-section,
 .services-section,
-.contact-section {
+.contact-section,
+.skills-section {
+  min-height: 500px;
   h1 {
     @extend .text-center;
     @extend .text-uppercase;
     @extend .fw-bold;
+    text-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
   }
 }
 
@@ -42,3 +87,23 @@ $warning: $mikado-yellow;
   background: $mikado-yellow;
 }
 
+.contact-section form {
+  input,textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $blue-green;
+    &:focus {
+      background: transparent;
+      border-bottom: 2px solid $mikado-yellow;
+      border-left: 2px solid $mikado-yellow;
+      color: $powder-blue;
+      outline-width: 1px;
+    }
+  }
+  button{
+
+    &:hover{
+      @extend .btn-warning;
+    }
+  }
+}
