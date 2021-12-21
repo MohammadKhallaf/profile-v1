@@ -4,7 +4,7 @@ const buildpage = ()=>{
   fetch("../res/json/portfolio.json",{
    headers:{
      'Content-Type':'application/json',
-     'Access-Control-Allow_Origin':'*'
+     'Access-Control-Allow-Origin':'*'
    }
   })
   .then((result)=>{
