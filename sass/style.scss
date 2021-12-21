@@ -88,7 +88,8 @@ $card-height: 100%;
 }
 
 .contact-section form {
-  input,textarea {
+  input,
+  textarea {
     background: transparent;
     border: none;
     border-bottom: 2px solid $blue-green;
@@ -100,9 +101,8 @@ $card-height: 100%;
       outline-width: 1px;
     }
   }
-  button{
-
-    &:hover{
+  button {
+    &:hover {
       @extend .btn-warning;
     }
   }
