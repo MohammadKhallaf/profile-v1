@@ -14,8 +14,9 @@
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/jquery.min.js"></script>
     <!-- app js -->
+
     <script src="./js/app.js" defer></script>
   </head>
   <body class="mt-5">
@@ -51,22 +52,23 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Services</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#about"
                   >About</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#portfolio"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#services"
+                  >Services</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact"
                   >Contact</a
                 >
               </li>
@@ -121,7 +123,7 @@
     </div>
     <!-- /summary -->
     <!-- About -->
-    <div class="container-fluid mx-0 py-5 bg-primary">
+    <div class="container-fluid mx-0 py-5 bg-primary" id="about">
       <div class="about-section">
         <h1 class="text-warning">About me</h1>
         <p class="text-center text-white text-opacity-75 mb-5">
@@ -233,7 +235,7 @@
     </div>
     <!-- /About -->
     <!--== Portfolio ==-->
-    <div class="container-fluid mx-0 py-5">
+    <div class="container-fluid mx-0 py-5" id="portfolio">
       <div class="container projects-section">
         <h1>Portfolio</h1>
         <p class="text-center pb-4 text-muted">Where it become real ...</p>
@@ -248,7 +250,7 @@
     <!-- /Portfolio -->
 
     <!-- Services -->
-    <div class="container-fluid mx-0 py-5 bg-secondary">
+    <div class="container-fluid mx-0 py-5 bg-secondary" id="services">
       <div class="container services-section">
         <h1 class="text-warning">Features I introduce</h1>
 
@@ -309,7 +311,7 @@
     </div>
     <!-- /skills -->
     <!-- CONTACT -->
-    <div class="container-fluid mx-0 py-5 bg-dark">
+    <div class="container-fluid mx-0 py-5 bg-dark" id="contact">
       <div class="container px-5 contact-section">
         <h1 class="text-success mb-5">Contact me</h1>
         <div class="row">

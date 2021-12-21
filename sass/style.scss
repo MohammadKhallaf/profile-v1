@@ -102,8 +102,10 @@ a {
     }
   }
   button {
+    transition: all ease 0.2s;
     &:hover {
       @extend .btn-warning;
+      font-weight: bold;
     }
   }
 }
