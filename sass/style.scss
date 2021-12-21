@@ -29,9 +29,9 @@ $card-height: 100%;
 @import "../components/bootstrap/scss/bootstrap.scss";
 @import "carousel-edit";
 
-// a{
-//   text-decoration: none;
-// }
+a {
+  text-decoration: none;
+}
 .card {
   max-width: 25rem;
   overflow: hidden;
