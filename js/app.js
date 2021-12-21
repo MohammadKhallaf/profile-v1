@@ -2,7 +2,10 @@ const projects =[]
 const buildpage = ()=>{
 
   fetch("../res/json/portfolio.json",{
-    mode: 'cors'
+   headers:{
+     'Content-Type':'application/json',
+     'Access-Control-Allow_Origin':'*'
+   }
   })
   .then((result)=>{
     return result.json()
