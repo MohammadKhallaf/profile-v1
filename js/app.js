@@ -1,25 +1,27 @@
-const projects =[{
-  "id":1,
-"title":"E-commerce ITI",
-"image":"./res/imgs/project-imgs/e-commerce-iti/iti-ecomm-1.png",
-"description":"Pure HTML, CSS and JS.",
-"url":"https://mohammadkhallaf.github.io/iti-ecommerce-project/store.html"
-}
-,{
-  "id":1,
-"title":"Hosto Plans",
-"image":"./res/imgs/project-imgs/iti-bootstrap-1/iti-bootstrap-1.png",
-"description":"Bootstrap 5",
-"url":"https://mohammadkhallaf.github.io/iti-bootstrap-page-1/"
-}
-]
+import { hideOnScroll, hideOnTime, setBehaviour } from "../js/main.js";
+import { sectionNames } from "./modules/navigation.js";
 
+const projects = [
+  {
+    id: 0,
+    title: "E-commerce ITI",
+    image: "./res/imgs/project-imgs/e-commerce-iti/iti-ecomm-1.png",
+    description: "Pure HTML, CSS and JS.",
+    url: "https://mohammadkhallaf.github.io/iti-ecommerce-project/store.html",
+  },
+  {
+    id: 1,
+    title: "Hosto Plans",
+    image: "./res/imgs/project-imgs/iti-bootstrap-1/iti-bootstrap-1.png",
+    description: "Bootstrap 5",
+    url: "https://mohammadkhallaf.github.io/iti-bootstrap-page-1/",
+  },
+];
 
-
-const buildpage = ()=>{
-
+// console.log(sectionNames);
+const buildpage = () => {
   /* a problem with git when fetching using it, so I simulated it */
-  //#region 
+  //#region
   // fetch("../res/json/portfolio.json",{
   //  headers:{
   //    'Content-Type':'application/json',
@@ -34,32 +36,25 @@ const buildpage = ()=>{
   // buildProjectsPortfolio();
   // })
   //#endregion
-  let portfolioRow = $("#portfolio-row")
+  let portfolioRow = $("#portfolio-row");
 
-  const buildProjectsPortfolio =()=>{
-    projects.forEach((project,index)=>{
-      if(!project.title) {
-        return
+  const buildProjectsPortfolio = () => {
+    projects.forEach((project, index) => {
+      if (!project.title) {
+        return;
       }
       let id = project.id;
       let img = project.image;
       let title = project.title;
       let description = project.description;
       let url = project.url;
-      console.log(title,img)
-      portfolioRow.append(createPortfolio(index,img,title,description,url))
-    })
-    
-     
-    
-  }
+      // console.log(title, img);
+      portfolioRow.append(createPortfolio(index, img, title, description, url));
+    });
+  };
 
- 
-  
-console.log(portfolioRow)
-
-const createPortfolio = (index,img,title,dscrption,url="#")=>{
-let template=`
+  const createPortfolio = (index, img, title, dscrption, url = "#") => {
+    let template = `
 <!-- project ${index} -->
 
 <div class="col">
@@ -88,13 +83,34 @@ let template=`
 </div>
 </div>
             <!-- /project ${index} -->
-`
-return template;
-}
+`;
+    return template;
+  };
 
-buildProjectsPortfolio();
-}
+  buildProjectsPortfolio();
+};
 
-$(document).ready(()=>{
+$(document).ready(() => {
   buildpage();
-})
+});
+
+window.addEventListener("scroll", () => {
+  setBehaviour();
+  hideOnTime(2000);
+
+  let afterScroll = window.pageYOffset;
+  hideOnScroll(afterScroll);
+});
+
+// Show the Nav bar when hover at the top area
+document.addEventListener("mousemove", function (e) {
+  if (e.clientY <= 60) {
+    hideOnTime(5000);
+  }
+});
+
+$("#to-top").on("click", () => {
+  $("html").animate({
+    scrollTop:0
+  },200)
+});
